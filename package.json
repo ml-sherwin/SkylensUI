@@ -1,0 +1,39 @@
+{
+  "name": "skylens-ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+  },
+  "dependencies": {
+    "@babel/core": "^7.18.13",
+    "@nuxt/kit": "^3.0.0-rc.9",
+    "gsap": "^3.11.1"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "eslint": "latest",
+    "nuxt": "^3.0.0-rc.9",
+    "prettier": "2.7.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.0.0"
+  }
+}
